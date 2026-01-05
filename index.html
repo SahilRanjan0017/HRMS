@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, viewport-fit=cover maximum-scale=1.0, user-scalable=no" />
+	<title>Megha HR</title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content="Megha HR" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+	<!-- required for setting the status bar bg as white -->
+	<meta name="theme-color" content="#fff" />
+
+	<!-- PWA -->
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="apple-touch-icon" href="/favicon.png" />
+
+</head>
+
+<body class="antialiased">
+	<div id="app"></div>
+	<div id="modals"></div>
+	<div id="popovers"></div>
+
+	<script>
+		// Frappe boot data mock - removed Jinja placeholders
+		window.csrf_token = "";
+		window.site_name = "Megha HR";
+		if (!window.frappe) window.frappe = {};
+		window.frappe.boot = {
+			site_name: "Megha HR",
+			lang: "en",
+			user: {
+				name: "Administrator",
+				full_name: "Sahil Ranjan"
+			}
+		};
+	</script>
+
+	<script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

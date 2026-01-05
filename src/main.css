@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ion-modal {
+	--height: auto;
+}
+
+input:disabled {
+	--webkit-text-fill-color: var(--tw-text-color);
+	opacity: 0.9;
+	/* required on iOS */
+	color: var(--tw-text-color);
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+input::-webkit-date-and-time-value {
+	text-align: left;
+}
+
+/* Premium UI Colors */
+:root {
+	--primary: 59, 130, 246;
+	/* #3b82f6 */
+	--primary-hover: 37, 99, 235;
+
+	/* Light Theme (White Premium) */
+	--bg-app: 249, 250, 251;
+	/* gray-50 */
+	--bg-panel: 255, 255, 255;
+	--text-main: 17, 24, 39;
+	/* gray-900 */
+	--text-muted: 107, 114, 128;
+	/* gray-500 */
+	--border-color: 243, 244, 246;
+	/* gray-100 */
+}
+
+.dark {
+	/* Dark Theme (Deep Premium) */
+	--bg-app: 5, 5, 10;
+	--bg-panel: 15, 15, 25;
+	--text-main: 255, 255, 255;
+	--text-muted: 156, 163, 175;
+	/* gray-400 */
+	--border-color: 31, 41, 55;
+	/* gray-800 */
+}
+
+body {
+	-webkit-tap-highlight-color: transparent;
+	background-color: rgb(var(--bg-app));
+	color: rgb(var(--text-main));
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Premium Card Style */
+.premium-card {
+	background-color: rgb(var(--bg-panel));
+	border: 1px solid rgb(var(--border-color));
+	@apply rounded-card shadow-card transition-all duration-300;
+}
+
+.dark .premium-card {
+	@apply shadow-card border-white/5;
+}
+
+/* Premium Input Style */
+.premium-input label {
+	@apply font-bold text-xs uppercase tracking-widest mb-2 !important;
+	color: rgb(var(--text-muted));
+}
+
+.premium-input input {
+	background-color: rgb(var(--bg-panel));
+	border: 1px solid rgb(var(--border-color));
+	color: rgb(var(--text-main));
+	@apply rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all py-3.5 px-5 !important;
+}
+
+.dark .premium-input input {
+	@apply bg-white/5 border-white/10;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+
+	0%,
+	100% {
+		opacity: 0.3;
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.5;
+		transform: scale(1.05);
+	}
+}
+
+.animate-pulse-slow {
+	animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+/* Ionic Overrides */
+ion-content {
+	--background: rgb(var(--bg-app));
+	--color: rgb(var(--text-main));
+}
+
+ion-header {
+	--background: rgb(var(--bg-panel));
+}
+
+.ion-page {
+	background-color: rgb(var(--bg-app));
+}
+
+.premium-input-field input {
+	@apply w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-5 text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-medium !important;
+}
