@@ -1,4 +1,4 @@
-import { createResource } from "@/utils/frappe-ui"
+import { createResource } from "@/utils/api"
 import { reactive } from "vue"
 import { employeeResource } from "./employee"
 
