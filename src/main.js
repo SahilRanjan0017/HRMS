@@ -4,11 +4,7 @@ import router from "./router"
 import { initSocket } from "./socket"
 
 // Local replacements for frappe-ui
-import {
-	setConfig,
-	request,
-	resourcesPlugin,
-} from "@/utils/api"
+import { setConfig, request, resourcesPlugin } from "@/utils/api"
 
 import Button from "@/components/ui/Button.vue"
 import Input from "@/components/ui/Input.vue"
@@ -70,10 +66,13 @@ const mountApp = () => {
 }
 
 translationsPlugin.isReady().then(() => {
-	router.isReady().then(mountApp).catch(e => {
-		console.error("[Main] Router failed to ready, mounting anyway", e)
-		mountApp()
-	})
+	router
+		.isReady()
+		.then(mountApp)
+		.catch((e) => {
+			console.error("[Main] Router failed to ready, mounting anyway", e)
+			mountApp()
+		})
 })
 
 router.beforeEach(async (to, _, next) => {

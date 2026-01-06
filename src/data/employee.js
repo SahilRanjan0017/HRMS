@@ -11,7 +11,7 @@ export const employeeResource = createResource({
 		company: "HRMS",
 		date_of_joining: "2024-01-01",
 		department: "Management",
-		designation: "Product Lead"
+		designation: "Product Lead",
 	},
 	onError(error) {
 		console.log("Employee resource error bypassed for demo")

@@ -1,7 +1,9 @@
 <template>
 	<div class="flex flex-col gap-6 w-full mt-4">
 		<div class="flex flex-row justify-between items-center px-2">
-			<div class="text-xs font-black uppercase tracking-widest text-[rgb(var(--text-muted))]">
+			<div
+				class="text-xs font-black uppercase tracking-widest text-[rgb(var(--text-muted))]"
+			>
 				{{ __("Upcoming Holidays") }}
 			</div>
 			<div
@@ -23,11 +25,15 @@
 					<div class="p-2 bg-blue-500/10 rounded-xl text-blue-500">
 						<FeatherIcon name="calendar" class="h-5 w-5" />
 					</div>
-					<div class="text-base font-bold text-[rgb(var(--text-main))] truncate max-w-[180px]">
+					<div
+						class="text-base font-bold text-[rgb(var(--text-main))] truncate max-w-[180px]"
+					>
 						{{ __(holiday.description) }}
 					</div>
 				</div>
-				<div class="text-sm font-black tracking-tight text-blue-500 bg-blue-500/10 px-3 py-1.5 rounded-xl whitespace-nowrap">
+				<div
+					class="text-sm font-black tracking-tight text-blue-500 bg-blue-500/10 px-3 py-1.5 rounded-xl whitespace-nowrap"
+				>
 					{{ holiday.formatted_holiday_date }}
 				</div>
 			</div>
@@ -45,7 +51,9 @@
 	>
 		<div class="bg-white w-full flex flex-col items-center justify-center pb-5">
 			<div class="w-full pt-8 pb-5 border-b text-center">
-				<span class="text-gray-900 font-bold text-lg">{{ __("Holiday List") }}</span>
+				<span class="text-gray-900 font-bold text-lg">{{
+					__("Holiday List")
+				}}</span>
 			</div>
 			<div class="w-full flex flex-col items-center justify-center gap-5 p-4">
 				<div

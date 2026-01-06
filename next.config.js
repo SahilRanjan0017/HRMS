@@ -5,13 +5,13 @@ const nextConfig = {
 	images: {
 		remotePatterns: [
 			{
-				protocol: 'https',
-				hostname: '**',
+				protocol: "https",
+				hostname: "**",
 			},
 		],
 	},
 	experimental: {
-		optimizePackageImports: ['lucide-react'],
+		optimizePackageImports: ["lucide-react"],
 	},
 }
 

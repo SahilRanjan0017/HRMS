@@ -1,22 +1,35 @@
 <template>
 	<div class="premium-card w-full p-8 space-y-6">
 		<div class="space-y-2">
-			<h2 class="text-2xl font-black tracking-tight text-[rgb(var(--text-main))]">
+			<h2
+				class="text-2xl font-black tracking-tight text-[rgb(var(--text-main))]"
+			>
 				{{ __("Hey, {0} 👋", [employee?.data?.first_name]) }}
 			</h2>
-			<p v-if="!settings.data?.allow_employee_checkin_from_mobile_app" class="text-sm font-bold uppercase tracking-widest text-[rgb(var(--text-muted))]">
+			<p
+				v-if="!settings.data?.allow_employee_checkin_from_mobile_app"
+				class="text-sm font-bold uppercase tracking-widest text-[rgb(var(--text-muted))]"
+			>
 				{{ dayjs().format("ddd, D MMMM, YYYY") }}
 			</p>
 		</div>
 
-		<div v-if="settings.data?.allow_employee_checkin_from_mobile_app" class="space-y-4">
-			<div v-if="lastLog" class="p-4 bg-blue-500/5 rounded-2xl border border-blue-500/10">
+		<div
+			v-if="settings.data?.allow_employee_checkin_from_mobile_app"
+			class="space-y-4"
+		>
+			<div
+				v-if="lastLog"
+				class="p-4 bg-blue-500/5 rounded-2xl border border-blue-500/10"
+			>
 				<div class="flex items-center gap-3">
 					<div class="p-2 bg-blue-500/10 rounded-xl text-blue-500">
 						<FeatherIcon name="clock" class="h-4 w-4" />
 					</div>
 					<div class="text-sm font-medium text-[rgb(var(--text-main))]">
-						<span class="text-[rgb(var(--text-muted))]">{{ __("Last {0}: ", [__(lastLogType)]) }}</span>
+						<span class="text-[rgb(var(--text-muted))]">{{
+							__("Last {0}: ", [__(lastLogType)])
+						}}</span>
 						<span class="font-bold">{{ formatTimestamp(lastLog.time) }}</span>
 					</div>
 				</div>
@@ -29,7 +42,11 @@
 			>
 				<template #prefix>
 					<FeatherIcon
-						:name="nextAction.action === 'IN' ? 'arrow-right-circle' : 'arrow-left-circle'"
+						:name="
+							nextAction.action === 'IN'
+								? 'arrow-right-circle'
+								: 'arrow-left-circle'
+						"
 						class="w-5 h-5 mr-1"
 					/>
 				</template>
@@ -37,7 +54,10 @@
 			</Button>
 
 			<div class="text-center">
-				<router-link :to="{ name: 'EmployeeCheckinListView' }" class="text-xs font-bold uppercase tracking-widest text-blue-500 hover:text-blue-600 transition-colors">
+				<router-link
+					:to="{ name: 'EmployeeCheckinListView' }"
+					class="text-xs font-bold uppercase tracking-widest text-blue-500 hover:text-blue-600 transition-colors"
+				>
 					{{ __("View Check-in History") }}
 				</router-link>
 			</div>
@@ -51,7 +71,9 @@
 		:initial-breakpoint="1"
 		:breakpoints="[0, 1]"
 	>
-		<div class="h-120 w-full flex flex-col items-center justify-center gap-5 p-4 mb-5">
+		<div
+			class="h-120 w-full flex flex-col items-center justify-center gap-5 p-4 mb-5"
+		>
 			<div class="flex flex-col gap-1.5 mt-2 items-center justify-center">
 				<div class="font-bold text-xl">
 					{{ dayjs(checkinTimestamp).format("hh:mm:ss a") }}
@@ -66,7 +88,9 @@
 					{{ locationStatus }}
 				</span>
 
-				<div class="rounded border-4 translate-z-0 block overflow-hidden w-full h-170">
+				<div
+					class="rounded border-4 translate-z-0 block overflow-hidden w-full h-170"
+				>
 					<iframe
 						width="100%"
 						height="170"
@@ -81,7 +105,12 @@
 				</div>
 			</template>
 
-			<Button :loading="checkins.insert.loading" variant="solid" class="w-full py-5 text-sm disabled:bg-gray-700" @click="submitLog(nextAction.action)">
+			<Button
+				:loading="checkins.insert.loading"
+				variant="solid"
+				class="w-full py-5 text-sm disabled:bg-gray-700"
+				@click="submitLog(nextAction.action)"
+			>
 				{{ __("Confirm {0}", [nextAction.label]) }}
 			</Button>
 		</div>
@@ -112,12 +141,19 @@ const settings = createResource({
 	initialData: {
 		allow_employee_checkin_from_mobile_app: 1,
 		allow_geolocation_tracking: 1,
-	}
+	},
 })
 
 const checkins = createListResource({
 	doctype: DOCTYPE,
-	fields: ["name", "employee", "employee_name", "log_type", "time", "device_id"],
+	fields: [
+		"name",
+		"employee",
+		"employee_name",
+		"log_type",
+		"time",
+		"device_id",
+	],
 	filters: computed(() => ({
 		employee: employee.data?.name,
 	})),
@@ -126,9 +162,9 @@ const checkins = createListResource({
 		{
 			name: "CHECKIN-001",
 			log_type: "OUT",
-			time: dayjs().subtract(1, 'hour').format("YYYY-MM-DD HH:mm:ss")
-		}
-	]
+			time: dayjs().subtract(1, "hour").format("YYYY-MM-DD HH:mm:ss"),
+		},
+	],
 })
 
 onMounted(() => {
@@ -171,10 +207,15 @@ function handleLocationError(error) {
 
 const fetchLocation = () => {
 	if (!navigator.geolocation) {
-		locationStatus.value = __("Geolocation is not supported by your current browser")
+		locationStatus.value = __(
+			"Geolocation is not supported by your current browser"
+		)
 	} else {
 		locationStatus.value = __("Locating...")
-		navigator.geolocation.getCurrentPosition(handleLocationSuccess, handleLocationError)
+		navigator.geolocation.getCurrentPosition(
+			handleLocationSuccess,
+			handleLocationError
+		)
 	}
 }
 

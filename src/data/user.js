@@ -8,7 +8,7 @@ export const userResource = createResource({
 		name: "Administrator",
 		full_name: "Sahil Ranjan",
 		first_name: "Sahil",
-		user_image: "https://github.com/shadcn.png"
+		user_image: "https://github.com/shadcn.png",
 	},
 	onError(error) {
 		console.log("User resource error bypassed for demo")

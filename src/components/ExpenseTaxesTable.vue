@@ -1,7 +1,9 @@
 <template>
 	<template v-if="expenseClaim.expenses">
 		<div class="flex flex-row justify-between items-center pt-4">
-			<h2 class="text-base font-semibold text-gray-800">{{ __("Taxes & Charges") }} </h2>
+			<h2 class="text-base font-semibold text-gray-800">
+				{{ __("Taxes & Charges") }}
+			</h2>
 			<div class="flex flex-row gap-3 items-center">
 				<span class="text-base font-semibold text-gray-800">
 					{{ formatCurrency(expenseClaim.total_taxes_and_charges, currency) }}
@@ -219,7 +221,9 @@ taxesTableFields.reload()
 const modalTitle = computed(() => {
 	if (props.isReadOnly) return __("Expense Tax")
 
-	return editingIdx.value === null ? __("New Expense Tax") : __("Edit Expense Tax")
+	return editingIdx.value === null
+		? __("New Expense Tax")
+		: __("Edit Expense Tax")
 })
 
 const addButtonDisabled = computed(() => {
