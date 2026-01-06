@@ -126,7 +126,8 @@
 </template>
 
 <script setup>
-import { FeatherIcon, createResource } from "@/utils/frappe-ui"
+import { createResource } from "@/utils/api"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
 import { computed, ref, watch, inject } from "vue"
 
 import FormField from "@/components/FormField.vue"

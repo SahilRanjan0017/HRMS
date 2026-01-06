@@ -76,6 +76,8 @@
 <script setup>
 import { inject, computed } from "vue"
 import { IonModal } from "@ionic/vue"
+import { createResource } from "@/utils/api"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
 import { FeatherIcon, createResource } from "@/utils/frappe-ui"
 
 const employee = inject("$employee")

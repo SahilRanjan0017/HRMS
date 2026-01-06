@@ -89,8 +89,9 @@
 </template>
 
 <script setup>
-import { FeatherIcon, Dialog } from "@/utils/frappe-ui"
 import { ref } from "vue"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
+// TODO: Dialog component needs to be implemented
 import { IonModal } from "@ionic/vue"
 
 import FilePreviewModal from "@/components/FilePreviewModal.vue"

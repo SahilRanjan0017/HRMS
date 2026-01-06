@@ -89,8 +89,9 @@
 </template>
 
 <script setup>
-import { createResource, createListResource, toast, FeatherIcon } from "@/utils/frappe-ui"
+import { createResource, createListResource, toast } from "@/utils/api"
 import { computed, inject, ref, onMounted, onBeforeUnmount } from "vue"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
 import { IonModal, modalController } from "@ionic/vue"
 
 import { formatTimestamp } from "@/utils/formatters"
