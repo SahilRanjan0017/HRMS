@@ -12,7 +12,7 @@
 				<!-- Nav -->
 				<nav class="relative z-50 flex items-center justify-between px-8 py-8 max-w-7xl mx-auto">
 					<div class="flex items-center space-x-3 group cursor-pointer">
-						<img src="/megha_hr_logo.png" alt="Megha HR" class="h-10 w-auto group-hover:scale-105 transition-transform" />
+						<img src="/megha_hr_logo.png" alt="HRMS" class="h-10 w-auto group-hover:scale-105 transition-transform" />
 					</div>
 					<div class="hidden md:flex items-center space-x-10 text-sm font-semibold tracking-wide text-gray-400">
 						<a href="#" class="hover:text-white transition-colors">Solutions</a>
@@ -35,7 +35,7 @@
 								<span class="flex h-2 w-2 rounded-full bg-blue-500 animate-ping"></span>
 								<span class="text-xs font-bold uppercase tracking-widest text-blue-400">New Era of HR Management</span>
 							</div>
-							
+
 							<h1 class="text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight">
 								Reimagine <br/>
 								<span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Human Capital</span>
@@ -50,7 +50,7 @@
 									Start Free Trial
 									<span class="absolute inset-0 rounded-2xl bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></span>
 								</router-link>
-								<button 
+								<button
 									@click="showDemoToast"
 									class="px-10 py-5 bg-white/5 border border-white/10 rounded-2xl font-black text-lg backdrop-blur-xl hover:bg-white/10 transition-all flex items-center space-x-3"
 								>
@@ -72,7 +72,7 @@
 						<div class="relative group animate-in fade-in slide-in-from-right-12 duration-1000 delay-200">
 							<!-- Glow behind image -->
 							<div class="absolute inset-x-0 bottom-[-50px] top-40 bg-blue-600/30 blur-[100px] rounded-[100%] group-hover:bg-blue-500/40 transition-colors duration-700"></div>
-							
+
 							<!-- Mockup Card -->
 							<div class="relative bg-[#0A0A1F] border border-white/10 rounded-[2.5rem] p-4 shadow-2xl transform lg:rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
 								<div class="bg-white/5 rounded-[2rem] overflow-hidden aspect-[4/3] flex items-center justify-center relative">
@@ -115,9 +115,9 @@
 				<footer class="py-20 border-t border-white/5">
 					<div class="max-w-7xl mx-auto px-8 flex flex-col items-center">
 						<div class="mb-6 opacity-50 hover:opacity-100 transition-opacity">
-							<img src="/megha_hr_logo.png" alt="Megha HR" class="h-8 w-auto grayscale hover:grayscale-0" />
+							<img src="/megha_hr_logo.png" alt="HRMS" class="h-8 w-auto grayscale hover:grayscale-0" />
 						</div>
-						<p class="text-gray-500 text-sm font-medium">© 2025 Megha HR. All rights reserved.</p>
+						<p class="text-gray-500 text-sm font-medium">© 2025 HRMS. All rights reserved.</p>
 					</div>
 				</footer>
 			</div>

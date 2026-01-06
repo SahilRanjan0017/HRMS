@@ -125,12 +125,13 @@
 
 		<!-- Time -->
 		<!-- Datetime -->
-		<DateTimePicker
+		<Input
 			v-else-if="props.fieldtype === 'Datetime'"
+			type="datetime-local"
 			:value="modelValue"
 			:placeholder="`Select ${props.label}`"
-			:formatter="(val) => dayjs(val).format('DD-MM-YYYY HH:mm:ss')"
-			@update:modelValue="(v) => emit('update:modelValue', v)"
+			@input="(v) => emit('update:modelValue', v)"
+			@change="(v) => emit('change', v)"
 			v-bind="$attrs"
 			:disabled="isReadOnly"
 		/>
@@ -140,7 +141,7 @@
 </template>
 
 <script setup>
-import { Autocomplete, DateTimePicker, ErrorMessage, Input } from "@/utils/frappe-ui"
+import { Autocomplete, ErrorMessage, Input } from "@/utils/frappe-ui"
 import { computed, onMounted, inject } from "vue"
 
 import Link from "@/components/Link.vue"

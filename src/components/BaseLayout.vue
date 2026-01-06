@@ -5,7 +5,7 @@
       <div class="h-full px-6 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center gap-4">
-          <img src="/megha_hr_logo.png" alt="Megha HR" class="h-8" />
+          <img src="/megha_hr_logo.png" alt="HRMS" class="h-8" />
         </div>
 
         <!-- Global Search -->
@@ -47,8 +47,8 @@
             class="group relative p-3 rounded-m hover:bg-primary-50 transition-all"
             :class="{ 'bg-primary-50': isActive(item.route) }"
           >
-            <component 
-              :is="item.icon" 
+            <component
+              :is="item.icon"
               class="h-6 w-6 transition-colors"
               :class="isActive(item.route) ? 'text-primary' : 'text-text-secondary group-hover:text-primary'"
             />

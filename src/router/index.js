@@ -8,6 +8,21 @@ import employeeAdvanceRoutes from "./advances"
 import salarySlipRoutes from "./salary_slips"
 
 const routes = [
+			{
+				path: "/travel",
+				name: "Travel",
+				component: () => import("@/views/Travel.vue"),
+			},
+			{
+				path: "/hr-connect",
+				name: "HRConnect",
+				component: () => import("@/views/HRConnect.vue"),
+			},
+		{
+			path: "/modules",
+			name: "ModulesDashboard",
+			component: () => import("@/views/ModulesDashboard.vue"),
+		},
 	{
 		path: "/",
 		redirect: "/home",

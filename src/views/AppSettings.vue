@@ -23,14 +23,14 @@
 							<div class="flex items-center justify-between">
 								<div class="flex flex-col">
 									<span class="text-sm font-bold text-gray-900 dark:text-white">{{ __('Push Notifications') }}</span>
-									<span class="text-xs text-gray-400">{{ __('Simulated for Megha HR Standalone') }}</span>
+									<span class="text-xs text-gray-400">{{ __('Simulated for HRMS Standalone') }}</span>
 								</div>
-								<div 
+								<div
 									@click="pushNotificationState = !pushNotificationState"
 									class="w-12 h-6 rounded-full transition-colors relative cursor-pointer"
 									:class="pushNotificationState ? 'bg-blue-600' : 'bg-gray-200'"
 								>
-									<div 
+									<div
 										class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform"
 										:class="pushNotificationState ? 'translate-x-6' : ''"
 									></div>

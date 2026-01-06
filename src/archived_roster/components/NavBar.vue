@@ -3,7 +3,7 @@
 		<div class="flex items-center space-x-1.5">
 			<a href="/" class="text-gray-600 hover:text-gray-700 flex items-center">
 				<img src="/megha_hr_logo.png" class="h-6 w-auto mr-2.5" alt="Logo" />
-				Megha HR
+				HRMS
 			</a>
 			<FeatherIcon name="chevron-right" class="h-4 w-4" />
 			<span class="font-medium">Roster</span>

@@ -7,7 +7,7 @@
           <div class="h-10 w-10 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/20">
             <span class="text-white font-black text-xl">M</span>
           </div>
-          <span class="text-xl font-black tracking-tight">Megha HR <span class="text-blue-600 text-sm align-top">Careers</span></span>
+          <span class="text-xl font-black tracking-tight">HRMS <span class="text-blue-600 text-sm align-top">Careers</span></span>
         </div>
         <div class="hidden md:flex items-center gap-8">
             <a href="#" class="text-sm font-bold text-gray-500 hover:text-blue-600 transition-colors">Our Culture</a>
@@ -22,7 +22,7 @@
     <section class="py-20 md:py-32 overflow-hidden relative">
         <div class="absolute top-0 right-0 -z-10 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full"></div>
         <div class="absolute bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-indigo-600/5 blur-[100px] rounded-full"></div>
-        
+
         <div class="max-w-4xl mx-auto px-6 text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <Badge theme="blue" variant="subtle" size="lg" class="py-2 px-6 rounded-full font-black border-2 border-blue-500/20">WE'RE HIRING</Badge>
             <h1 class="text-5xl md:text-7xl font-black tracking-tight text-[rgb(var(--text-main))] leading-tight">
@@ -30,7 +30,7 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Enterprise HR.</span>
             </h1>
             <p class="text-xl text-[rgb(var(--text-secondary))] max-w-2xl mx-auto font-medium leading-relaxed">
-                Join a world-class team of engineers, designers, and thinkers at Megha HR. We're building premium tools to empower 1M+ workers.
+                Join a world-class team of engineers, designers, and thinkers at HRMS. We're building premium tools to empower 1M+ workers.
             </p>
             <div class="max-w-lg mx-auto relative group">
                 <input type="text" placeholder="Search roles (e.g. Developer, Designer)..." class="w-full h-16 bg-white dark:bg-gray-800 border-2 border-[rgb(var(--border-color))] rounded-[2rem] px-8 pl-14 text-lg focus:ring-4 focus:ring-blue-500/10 focus:border-blue-600 outline-none transition-all shadow-xl shadow-black/5" />
@@ -53,8 +53,8 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div 
-                v-for="job in openJobs" 
+            <div
+                v-for="job in openJobs"
                 :key="job.id"
                 class="premium-card p-10 flex flex-col gap-6 group hover:scale-[1.02] hover:ring-2 hover:ring-blue-500/20 transition-all cursor-pointer bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-xl hover:shadow-2xl shadow-black/[0.03]"
             >
@@ -64,7 +64,7 @@
                     </div>
                     <Badge theme="green" variant="subtle" size="sm" class="font-black">Active</Badge>
                 </div>
-                
+
                 <div class="space-y-2">
                     <h3 class="text-2xl font-black text-[rgb(var(--text-main))] group-hover:text-blue-600 transition-colors leading-tight">{{ job.title }}</h3>
                     <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-bold text-[rgb(var(--text-secondary))]">
@@ -96,7 +96,7 @@
             <div class="space-y-4 text-center md:text-left">
                  <div class="flex items-center justify-center md:justify-start gap-3">
                     <div class="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black">M</div>
-                    <span class="text-lg font-black tracking-tight">Megha HR</span>
+                    <span class="text-lg font-black tracking-tight">HRMS</span>
                 </div>
                 <p class="text-sm font-bold text-gray-400">Next-Gen Enterprise Human Capital Management.</p>
             </div>

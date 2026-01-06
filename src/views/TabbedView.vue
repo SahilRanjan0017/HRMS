@@ -7,16 +7,22 @@
           <!-- Logo & Module Launcher -->
           <div class="flex items-center gap-4">
             <router-link to="/home">
-              <img src="/megha_hr_logo.png" alt="Megha HR" class="h-8 cursor-pointer" />
+              <img src="/megha_hr_logo.png" alt="HRMS" class="h-8 cursor-pointer" />
             </router-link>
-            
-            <!-- Module Grid Button -->
-            <button 
+
+            <!-- Module Grid Button (Modal) -->
+            <button
               @click="showModules = true"
               class="p-2 rounded-s hover:bg-neutral-100 transition-colors"
+              title="Quick Module Grid"
             >
               <LayoutGrid class="h-5 w-5 text-text-secondary" />
             </button>
+
+            <!-- All Modules Dashboard Button -->
+            <router-link to="/modules" class="ml-2 px-3 py-1.5 rounded bg-primary text-white font-bold text-xs hover:bg-primary-700 transition-colors shadow-sm">
+              All Modules
+            </router-link>
           </div>
 
           <!-- Global Search -->
@@ -49,10 +55,9 @@
         </div>
       </div>
 
-      <!-- Main Content with Router Outlet - SCROLLABLE -->
-      <ion-content class="ion-padding" :scroll-y="true">
-        <ion-router-outlet></ion-router-outlet>
-      </ion-content>
+
+      <!-- Main Content Router Outlet (must be direct child of IonTabs) -->
+      <ion-router-outlet></ion-router-outlet>
 
       <!-- Bottom Navigation Tabs -->
       <BottomTabs />
@@ -91,8 +96,8 @@
             <!-- Modules Grid -->
             <div class="p-6 overflow-y-auto max-h-[calc(80vh-100px)]">
               <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                <button 
-                  v-for="feature in allFeatures" 
+                <button
+                  v-for="feature in allFeatures"
                   :key="feature.id"
                   @click="navigateToFeature(feature.route)"
                   class="p-4 rounded-m border border-neutral-200 hover:border-primary hover:bg-primary-50/50 transition-all group text-left relative"
@@ -103,7 +108,7 @@
                   </div>
                   <h3 class="text-body-m font-semibold text-text-primary group-hover:text-primary mb-1">{{ feature.name }}</h3>
                   <p class="text-caption text-text-muted">{{ feature.description }}</p>
-                  
+
                   <span v-if="feature.badge" class="absolute top-2 right-2 badge badge-error">{{ feature.badge }}</span>
                 </button>
               </div>
@@ -119,7 +124,7 @@
 import { IonTabs, IonPage, IonRouterOutlet, IonContent } from "@ionic/vue"
 import { ref, computed, inject } from 'vue'
 import { useRouter } from 'vue-router'
-import { 
+import {
   Search, Bell, Sun, Moon, LayoutGrid, X,
   Users, Briefcase, LayoutDashboard, Clock, CalendarDays,
   DollarSign, Target, Award, Gift, BarChart3, FileCheck,
@@ -160,7 +165,12 @@ const allFeatures = [
 ]
 
 function navigateToFeature(route) {
-  router.push(route)
+  // Use replace for admin/top-level routes to avoid Ionic tab context issues
+  if (route.startsWith('/admin/') || route.startsWith('/travel') || route.startsWith('/hr-connect') || route.startsWith('/modules')) {
+    router.replace(route)
+  } else {
+    router.push(route)
+  }
   showModules.value = false
 }
 </script>

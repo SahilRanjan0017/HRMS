@@ -12,7 +12,8 @@
 </template>
 
 <script setup>
-import { createResource, Autocomplete, debounce } from "@/utils/frappe-ui"
+import { createResource, Autocomplete } from "@/utils/frappe-ui"
+import debounce from "lodash.debounce"
 import { ref, computed, watch } from "vue"
 
 const props = defineProps({

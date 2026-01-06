@@ -11,7 +11,7 @@
 				<!-- Nav -->
 				<nav class="relative z-50 flex items-center justify-between px-8 py-8 max-w-7xl mx-auto w-full">
 					<router-link to="/" class="flex items-center space-x-3 group cursor-pointer">
-						<img src="/megha_hr_logo.png" alt="Megha HR" class="h-10 w-auto group-hover:scale-105 transition-transform" />
+						<img src="/megha_hr_logo.png" alt="HRMS" class="h-10 w-auto group-hover:scale-105 transition-transform" />
 					</router-link>
 					<div class="flex items-center space-x-6">
 						<router-link to="/" class="text-sm font-bold text-gray-400 hover:text-white transition-colors">Back to Home</router-link>
@@ -23,7 +23,7 @@
 						<!-- Header -->
 						<div class="flex flex-col items-center space-y-4 text-center">
 							<div class="mb-4">
-								<img src="/megha_hr_logo.png" alt="Megha HR" class="h-24 w-auto drop-shadow-2xl" />
+								<img src="/megha_hr_logo.png" alt="HRMS" class="h-24 w-auto drop-shadow-2xl" />
 							</div>
 							<h1 class="text-4xl font-black tracking-tight text-white">
 								{{ __("Welcome Back") }}
@@ -92,7 +92,7 @@
 						</div>
 
 						<p class="text-center text-sm text-gray-500 pt-4">
-							&copy; {{ new Date().getFullYear() }} Megha HR.
+							&copy; {{ new Date().getFullYear() }} HRMS.
 						</p>
 					</div>
 				</div>

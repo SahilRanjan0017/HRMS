@@ -19,8 +19,8 @@ export default defineConfig({
 			},
 			manifest: {
 				display: "standalone",
-				name: "Megha HR",
-				short_name: "Megha HR",
+				name: "HRMS",
+				short_name: "HRMS",
 				start_url: "/",
 				description: "Everyday HR & Payroll operations at your fingertips",
 				theme_color: "#ffffff",
