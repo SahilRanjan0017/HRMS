@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { FeatherIcon } from "@/utils/frappe-ui"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
 
 const props = defineProps({
 	title: {

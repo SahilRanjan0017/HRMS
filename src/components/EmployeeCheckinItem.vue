@@ -16,8 +16,7 @@
 </template>
 
 <script setup>
-import { FeatherIcon } from "@/utils/frappe-ui"
-
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
 import ListItem from "@/components/ListItem.vue"
 import { formatTimestamp } from "@/utils/formatters"
 
