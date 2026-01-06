@@ -1,4 +1,4 @@
-import { toast } from "@/utils/frappe-ui"
+import { toast } from "@/utils/api"
 
 export function useDownloadPDF() {
 	async function downloadPDF({ doctype, docname, filename = null }) {

@@ -1,4 +1,4 @@
-import { createDocumentResource } from "@/utils/frappe-ui"
+import { createDocumentResource } from "@/utils/api"
 
 import dayjs from "@/utils/dayjs"
 
