@@ -6,9 +6,9 @@ import { initSocket } from "./socket"
 // Local replacements for frappe-ui
 import {
 	setConfig,
-	frappeRequest,
+	request,
 	resourcesPlugin,
-} from "@/utils/frappe-ui"
+} from "@/utils/api"
 
 import Button from "@/components/ui/Button.vue"
 import Input from "@/components/ui/Input.vue"
@@ -43,7 +43,7 @@ await auth.initialize("MEG-EMP-001") // Mocked for initial load
 const app = createApp(App)
 const socket = initSocket()
 
-setConfig("resourceFetcher", frappeRequest)
+setConfig("resourceFetcher", request)
 app.use(resourcesPlugin)
 app.use(translationsPlugin)
 
