@@ -30,7 +30,7 @@
 
 <script setup>
 import { computed, inject } from "vue"
-import { FeatherIcon } from "@/utils/frappe-ui"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
 
 import ListItem from "@/components/ListItem.vue"
 import SalaryIcon from "@/components/icons/SalaryIcon.vue"

@@ -141,7 +141,8 @@
 </template>
 
 <script setup>
-import { Autocomplete, ErrorMessage, Input } from "@/utils/frappe-ui"
+import Input from "@/components/ui/Input.vue"
+// TODO: Autocomplete and ErrorMessage components need to be implemented
 import { computed, onMounted, inject } from "vue"
 
 import Link from "@/components/Link.vue"

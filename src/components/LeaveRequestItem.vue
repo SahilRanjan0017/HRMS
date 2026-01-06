@@ -36,7 +36,8 @@
 
 <script setup>
 import { computed } from "vue"
-import { FeatherIcon, Badge } from "@/utils/frappe-ui"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
+// TODO: Badge component needs to be implemented
 
 import ListItem from "@/components/ListItem.vue"
 import LeaveIcon from "@/components/icons/LeaveIcon.vue"
