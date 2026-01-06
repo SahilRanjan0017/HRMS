@@ -1,5 +1,5 @@
 import router from "@/router"
-import { createResource } from "@/utils/frappe-ui"
+import { createResource } from "@/utils/api"
 
 export const employeeResource = createResource({
 	url: "hrms.api.get_current_employee_info",
