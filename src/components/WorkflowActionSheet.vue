@@ -46,7 +46,7 @@
 <script setup>
 import { IonActionSheet, modalController } from "@ionic/vue"
 import { computed, ref, onMounted, inject } from "vue"
-import { FeatherIcon } from "@/utils/frappe-ui"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
 
 const props = defineProps({
 	doc: {
