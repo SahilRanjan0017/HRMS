@@ -1,14 +1,14 @@
-'use client'
+"use client"
 
-import React from 'react'
-import { MainLayout } from '@/components/layout/MainLayout'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { useAuth } from '@/lib/hooks'
-import { EmployeeHeader } from '@/components/sections/EmployeeHeader'
-import { InfoCards } from '@/components/sections/InfoCards'
-import { LeaveAttendanceTable } from '@/components/sections/LeaveAttendanceTable'
-import { AttendanceStats } from '@/components/sections/AttendanceStats'
-import { FeaturesModal } from '@/components/sections/FeaturesModal'
+import React from "react"
+import { MainLayout } from "@/components/layout/MainLayout"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
+import { useAuth } from "@/lib/hooks"
+import { EmployeeHeader } from "@/components/sections/EmployeeHeader"
+import { InfoCards } from "@/components/sections/InfoCards"
+import { LeaveAttendanceTable } from "@/components/sections/LeaveAttendanceTable"
+import { AttendanceStats } from "@/components/sections/AttendanceStats"
+import { FeaturesModal } from "@/components/sections/FeaturesModal"
 
 export default function HomePage() {
 	const { employee, loading } = useAuth()

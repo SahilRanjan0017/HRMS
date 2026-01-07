@@ -1,37 +1,37 @@
-'use client'
+"use client"
 
-import React, { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { AttendanceCalendar } from './AttendanceCalendar'
-import dayjs from 'dayjs'
+import React, { useState } from "react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
+import { AttendanceCalendar } from "./AttendanceCalendar"
+import dayjs from "dayjs"
 
 export const AttendanceStats: React.FC = () => {
 	const [selectedMonth, setSelectedMonth] = useState(dayjs())
 
 	const stats = [
 		{
-			label: 'Present Days',
-			value: '22',
-			icon: '👤',
-			color: 'text-green-600',
+			label: "Present Days",
+			value: "22",
+			icon: "👤",
+			color: "text-green-600",
 		},
 		{
-			label: 'Leave Taken',
-			value: '2',
-			icon: '📅',
-			color: 'text-yellow-600',
+			label: "Leave Taken",
+			value: "2",
+			icon: "📅",
+			color: "text-yellow-600",
 		},
 		{
-			label: 'Total Hours',
-			value: '8.5h',
-			icon: '⏰',
-			color: 'text-blue-600',
+			label: "Total Hours",
+			value: "8.5h",
+			icon: "⏰",
+			color: "text-blue-600",
 		},
 		{
-			label: 'Attendance %',
-			value: '96.5%',
-			icon: '📊',
-			color: 'text-purple-600',
+			label: "Attendance %",
+			value: "96.5%",
+			icon: "📊",
+			color: "text-purple-600",
 		},
 	]
 
@@ -44,7 +44,9 @@ export const AttendanceStats: React.FC = () => {
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 pb-6 border-b">
 					{stats.map((stat, idx) => (
 						<div key={idx} className="text-center">
-							<p className="text-xs text-gray-500 uppercase font-medium mb-1">{stat.label}</p>
+							<p className="text-xs text-gray-500 uppercase font-medium mb-1">
+								{stat.label}
+							</p>
 							<p className={`text-2xl font-bold ${stat.color}`}>{stat.value}</p>
 						</div>
 					))}
