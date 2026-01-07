@@ -1,5 +1,5 @@
 import router from "@/router"
-import { createResource } from "@/utils/frappe-ui"
+import { createResource } from "@/utils/api"
 
 export const userResource = createResource({
 	url: "hrms.api.get_current_user_info",
@@ -8,7 +8,7 @@ export const userResource = createResource({
 		name: "Administrator",
 		full_name: "Sahil Ranjan",
 		first_name: "Sahil",
-		user_image: "https://github.com/shadcn.png"
+		user_image: "https://github.com/shadcn.png",
 	},
 	onError(error) {
 		console.log("User resource error bypassed for demo")

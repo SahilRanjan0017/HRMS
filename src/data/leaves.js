@@ -1,4 +1,4 @@
-import { createResource } from "@/utils/frappe-ui"
+import { createResource } from "@/utils/api"
 import { employeeResource } from "./employee"
 
 import dayjs from "@/utils/dayjs"

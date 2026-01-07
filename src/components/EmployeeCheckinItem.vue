@@ -3,7 +3,9 @@
 		<template #left>
 			<FeatherIcon name="clock" class="h-5 w-5 text-gray-500" />
 			<div class="flex flex-col items-start gap-1.5">
-				<div class="text-base font-normal text-gray-800">Log Type: {{ props.doc.log_type }}</div>
+				<div class="text-base font-normal text-gray-800">
+					Log Type: {{ props.doc.log_type }}
+				</div>
 				<div class="text-xs font-normal text-gray-500">
 					<span>{{ formatTimestamp(props.doc.time) }}</span>
 				</div>
@@ -16,8 +18,7 @@
 </template>
 
 <script setup>
-import { FeatherIcon } from "@/utils/frappe-ui"
-
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
 import ListItem from "@/components/ListItem.vue"
 import { formatTimestamp } from "@/utils/formatters"
 

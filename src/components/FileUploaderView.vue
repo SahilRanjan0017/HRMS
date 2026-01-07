@@ -1,7 +1,9 @@
 <template>
 	<div class="flex flex-col gap-3 py-4">
 		<label class="file-select">
-			<h2 class="text-base font-semibold text-gray-800 pb-4">{{ __("Attachments") }} </h2>
+			<h2 class="text-base font-semibold text-gray-800 pb-4">
+				{{ __("Attachments") }}
+			</h2>
 			<div class="select-button cursor-pointer">
 				<div
 					class="flex flex-col w-full border shadow-sm items-center rounded p-3 gap-2"
@@ -46,7 +48,7 @@
 
 			<Dialog v-model="showDialog">
 				<template #body-title>
-					<h2 class="text-lg font-bold">{{ __("Delete Attachment") }} </h2>
+					<h2 class="text-lg font-bold">{{ __("Delete Attachment") }}</h2>
 				</template>
 				<template #body-content>
 					<p>
@@ -89,8 +91,9 @@
 </template>
 
 <script setup>
-import { FeatherIcon, Dialog } from "@/utils/frappe-ui"
 import { ref } from "vue"
+import FeatherIcon from "@/components/ui/FeatherIcon.vue"
+// TODO: Dialog component needs to be implemented
 import { IonModal } from "@ionic/vue"
 
 import FilePreviewModal from "@/components/FilePreviewModal.vue"

@@ -1,4 +1,4 @@
-import { createDocumentResource } from "@/utils/frappe-ui"
+import { createDocumentResource } from "@/utils/api"
 
 import dayjs from "@/utils/dayjs"
 
@@ -14,7 +14,8 @@ export const formatCurrency = (value, currency) => {
 	// hack: if value contains a space, it is already formatted
 	if (value?.toString().trim().includes(" ")) return value
 
-	const locale = settings.doc?.country == "India" ? "en-IN" : settings.doc?.language
+	const locale =
+		settings.doc?.country == "India" ? "en-IN" : settings.doc?.language
 
 	const formatter = Intl.NumberFormat(locale, {
 		style: "currency",

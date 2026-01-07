@@ -4,11 +4,7 @@ import router from "./router"
 import { initSocket } from "./socket"
 
 // Local replacements for frappe-ui
-import {
-	setConfig,
-	frappeRequest,
-	resourcesPlugin,
-} from "@/utils/frappe-ui"
+import { setConfig, request, resourcesPlugin } from "@/utils/api"
 
 import Button from "@/components/ui/Button.vue"
 import Input from "@/components/ui/Input.vue"
@@ -43,7 +39,7 @@ await auth.initialize("MEG-EMP-001") // Mocked for initial load
 const app = createApp(App)
 const socket = initSocket()
 
-setConfig("resourceFetcher", frappeRequest)
+setConfig("resourceFetcher", request)
 app.use(resourcesPlugin)
 app.use(translationsPlugin)
 
@@ -70,10 +66,13 @@ const mountApp = () => {
 }
 
 translationsPlugin.isReady().then(() => {
-	router.isReady().then(mountApp).catch(e => {
-		console.error("[Main] Router failed to ready, mounting anyway", e)
-		mountApp()
-	})
+	router
+		.isReady()
+		.then(mountApp)
+		.catch((e) => {
+			console.error("[Main] Router failed to ready, mounting anyway", e)
+			mountApp()
+		})
 })
 
 router.beforeEach(async (to, _, next) => {

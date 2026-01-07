@@ -1,5 +1,5 @@
 import router from "@/router"
-import { createResource } from "@/utils/frappe-ui"
+import { createResource } from "@/utils/api"
 
 export const employeeResource = createResource({
 	url: "hrms.api.get_current_employee_info",
@@ -11,7 +11,7 @@ export const employeeResource = createResource({
 		company: "HRMS",
 		date_of_joining: "2024-01-01",
 		department: "Management",
-		designation: "Product Lead"
+		designation: "Product Lead",
 	},
 	onError(error) {
 		console.log("Employee resource error bypassed for demo")

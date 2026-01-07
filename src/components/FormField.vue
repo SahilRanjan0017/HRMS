@@ -2,7 +2,9 @@
 	<div v-if="showField" class="flex flex-col gap-1.5">
 		<!-- Label -->
 		<span
-			v-if="!['Check', 'Section Break', 'Column Break'].includes(props.fieldtype)"
+			v-if="
+				!['Check', 'Section Break', 'Column Break'].includes(props.fieldtype)
+			"
 			:class="[
 				// mark field as mandatory
 				props.reqd ? `after:content-['_*'] after:text-red-600` : ``,
@@ -36,7 +38,11 @@
 
 		<!-- Text -->
 		<Input
-			v-else-if="['Text Editor', 'Small Text', 'Text', 'Long Text'].includes(props.fieldtype)"
+			v-else-if="
+				['Text Editor', 'Small Text', 'Text', 'Long Text'].includes(
+					props.fieldtype
+				)
+			"
 			type="textarea"
 			:value="modelValue"
 			:placeholder="__('Enter {0}', [props.label])"
@@ -141,7 +147,8 @@
 </template>
 
 <script setup>
-import { Autocomplete, ErrorMessage, Input } from "@/utils/frappe-ui"
+import Input from "@/components/ui/Input.vue"
+// TODO: Autocomplete and ErrorMessage components need to be implemented
 import { computed, onMounted, inject } from "vue"
 
 import Link from "@/components/Link.vue"
@@ -222,7 +229,9 @@ function setDefaultValue() {
 			emit("update:modelValue", props.default)
 		}
 	} else {
-		props.fieldtype === "Check" ? emit("update:modelValue", false) : emit("update:modelValue", "")
+		props.fieldtype === "Check"
+			? emit("update:modelValue", false)
+			: emit("update:modelValue", "")
 	}
 }
 

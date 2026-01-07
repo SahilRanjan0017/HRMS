@@ -1,4 +1,4 @@
-import { createResource } from "@/utils/frappe-ui"
+import { createResource } from "@/utils/api"
 import { reactive } from "vue"
 import { employeeResource } from "./employee"
 
@@ -9,9 +9,25 @@ export const employees = createResource({
 	url: "hrms.api.get_all_employees",
 	auto: true,
 	initialData: [
-		{ name: "HR-EMP-0001", employee_name: "Sahil Ranjan", status: "Active", user_id: "Administrator", image: "https://github.com/shadcn.png" },
-		{ name: "HR-EMP-0002", employee_name: "Jane Smith", status: "Active", user_id: "jane@example.com" },
-		{ name: "HR-EMP-0003", employee_name: "John Doe", status: "On Leave", user_id: "john@example.com" }
+		{
+			name: "HR-EMP-0001",
+			employee_name: "Sahil Ranjan",
+			status: "Active",
+			user_id: "Administrator",
+			image: "https://github.com/shadcn.png",
+		},
+		{
+			name: "HR-EMP-0002",
+			employee_name: "Jane Smith",
+			status: "Active",
+			user_id: "jane@example.com",
+		},
+		{
+			name: "HR-EMP-0003",
+			employee_name: "John Doe",
+			status: "On Leave",
+			user_id: "john@example.com",
+		},
 	],
 	transform(data) {
 		return data.map((employee) => {

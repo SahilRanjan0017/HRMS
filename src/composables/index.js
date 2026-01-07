@@ -1,4 +1,4 @@
-import { createResource, toast } from "@/utils/frappe-ui"
+import { createResource, toast } from "@/utils/api"
 
 function getFileReader() {
 	const fileReader = new FileReader()

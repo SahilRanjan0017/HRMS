@@ -1,5 +1,5 @@
 import { computed, reactive } from "vue"
-import { createResource, call } from "@/utils/frappe-ui"
+import { createResource, call } from "@/utils/api"
 import { userResource } from "./user"
 import { employeeResource } from "./employee"
 import router from "@/router"

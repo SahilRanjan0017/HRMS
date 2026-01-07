@@ -1,4 +1,4 @@
-import { createResource } from "@/utils/frappe-ui"
+import { createResource } from "@/utils/api"
 
 const companyCurrency = createResource({
 	url: "hrms.api.get_company_currencies",

@@ -29,7 +29,6 @@
 </template>
 
 <script setup>
-import { FeatherIcon } from "@/utils/frappe-ui"
 import FormattedField from "@/components/FormattedField.vue"
 
 const props = defineProps({
