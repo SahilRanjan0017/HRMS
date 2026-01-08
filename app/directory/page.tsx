@@ -5,7 +5,7 @@ import { MainLayout } from "@/components/layout/MainLayout"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
 import { Input } from "@/components/ui/Input"
 import { Button } from "@/components/ui/Button"
-import { Search, Users, Org } from "lucide-react"
+import { Search, Users, Network } from "lucide-react"
 
 interface Employee {
 	id: string
@@ -92,7 +92,7 @@ export default function DirectoryPage() {
 							variant={viewMode === "org" ? "solid" : "outline"}
 							onClick={() => setViewMode("org")}
 						>
-							<Org className="w-4 h-4 mr-2" />
+							<Network className="w-4 h-4 mr-2" />
 							Org Chart
 						</Button>
 					</div>
