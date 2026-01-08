@@ -6,10 +6,24 @@ import { usePathname } from 'next/navigation'
 
 const navItems = [
 	{ label: 'Home', href: '/home', icon: '🏠' },
+	{ label: 'Directory', href: '/directory', icon: '👥' },
 	{ label: 'Attendance', href: '/attendance', icon: '📋' },
 	{ label: 'Leave', href: '/leave', icon: '📅' },
-	{ label: 'Expenses', href: '/expenses', icon: '💰' },
-	{ label: 'Salary', href: '/salary', icon: '💵' },
+	{ label: 'Payroll', href: '/salary', icon: '💵' },
+	{ label: 'Recruitment', href: '/recruitment', icon: '💼' },
+	{ label: 'Onboarding', href: '/onboarding', icon: '🚀' },
+	{ label: 'Performance', href: '/performance', icon: '⭐' },
+	{ label: 'Learning', href: '/learning', icon: '📚' },
+	{ label: 'Recognition', href: '/recognition', icon: '🏆' },
+	{ label: 'Benefits', href: '/benefits', icon: '❤️' },
+	{ label: 'Analytics', href: '/analytics', icon: '📊' },
+	{ label: 'Compliance', href: '/compliance', icon: '📋' },
+	{ label: 'Roles', href: '/roles', icon: '🔐' },
+	{ label: 'My Goals', href: '/my-goals', icon: '🎯' },
+	{ label: 'Travel', href: '/travel', icon: '✈️' },
+	{ label: 'HR Connect', href: '/hr-connect', icon: '💬' },
+	{ label: 'Config', href: '/configuration', icon: '⚙️' },
+	{ label: 'Expenses', href: '/expenses', icon: '🧾' },
 	{ label: 'Profile', href: '/profile', icon: '👤' },
 ]
 
