@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import React from 'react'
-import { SidebarLayout } from './SidebarLayout'
+import React from "react"
+import { SidebarLayout } from "./SidebarLayout"
 
 interface MainLayoutProps {
 	children: React.ReactNode

@@ -82,8 +82,12 @@ const getStatusColor = (status: string) => {
 }
 
 export default function OnboardingPage() {
-	const completedTasks = mockOnboardingTasks.filter((t) => t.status === "completed")
-	const inProgressTasks = mockOnboardingTasks.filter((t) => t.status === "in-progress")
+	const completedTasks = mockOnboardingTasks.filter(
+		(t) => t.status === "completed"
+	)
+	const inProgressTasks = mockOnboardingTasks.filter(
+		(t) => t.status === "in-progress"
+	)
 	const pendingTasks = mockOnboardingTasks.filter((t) => t.status === "pending")
 
 	return (
@@ -161,14 +165,15 @@ export default function OnboardingPage() {
 								>
 									<div className="mt-1">{getStatusIcon(task.status)}</div>
 									<div className="flex-1">
-										<h3 className="font-semibold text-gray-900">{task.title}</h3>
+										<h3 className="font-semibold text-gray-900">
+											{task.title}
+										</h3>
 										<p className="text-sm text-gray-600">{task.description}</p>
 										<div className="flex gap-4 mt-2 text-xs text-gray-500">
 											<span>Employee: {task.employee}</span>
 											<span>Assignee: {task.assignee}</span>
 											<span>
-												Due:{" "}
-												{new Date(task.dueDate).toLocaleDateString()}
+												Due: {new Date(task.dueDate).toLocaleDateString()}
 											</span>
 										</div>
 									</div>
@@ -177,15 +182,15 @@ export default function OnboardingPage() {
 											task.status === "completed"
 												? "bg-green-200 text-green-800"
 												: task.status === "in-progress"
-													? "bg-blue-200 text-blue-800"
-													: "bg-yellow-200 text-yellow-800"
+												? "bg-blue-200 text-blue-800"
+												: "bg-yellow-200 text-yellow-800"
 										}`}
 									>
 										{task.status === "in-progress"
 											? "In Progress"
 											: task.status === "completed"
-												? "Completed"
-												: "Pending"}
+											? "Completed"
+											: "Pending"}
 									</span>
 								</div>
 							))}

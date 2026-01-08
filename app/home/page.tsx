@@ -8,7 +8,17 @@ import { EmployeeHeader } from "@/components/sections/EmployeeHeader"
 import { InfoCards } from "@/components/sections/InfoCards"
 import { LeaveAttendanceTable } from "@/components/sections/LeaveAttendanceTable"
 import { AttendanceStats } from "@/components/sections/AttendanceStats"
-import { ArrowRight, Briefcase, Users, TrendingUp, Award, Calendar, BookOpen, Heart, MessageSquare } from "lucide-react"
+import {
+	ArrowRight,
+	Briefcase,
+	Users,
+	TrendingUp,
+	Award,
+	Calendar,
+	BookOpen,
+	Heart,
+	MessageSquare,
+} from "lucide-react"
 
 interface FeatureCard {
 	title: string
@@ -127,7 +137,9 @@ export default function HomePage() {
 				<div className="flex items-center justify-center min-h-96">
 					<div className="text-center">
 						<div className="w-12 h-12 rounded-full border-4 border-blue-200 border-t-blue-600 animate-spin mx-auto mb-4"></div>
-						<p className="text-gray-600 font-medium">Loading your dashboard...</p>
+						<p className="text-gray-600 font-medium">
+							Loading your dashboard...
+						</p>
 					</div>
 				</div>
 			</MainLayout>
@@ -163,9 +175,12 @@ export default function HomePage() {
 						<div className="w-full max-w-sm">
 							<div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl p-8 text-center shadow-lg">
 								<div className="text-6xl mb-4">👋</div>
-								<h3 className="text-2xl font-bold text-gray-900">Welcome Back!</h3>
+								<h3 className="text-2xl font-bold text-gray-900">
+									Welcome Back!
+								</h3>
 								<p className="text-gray-600 mt-2">
-									Your HRMS is ready to help you manage your HR operations efficiently.
+									Your HRMS is ready to help you manage your HR operations
+									efficiently.
 								</p>
 								<div className="mt-6 pt-6 border-t border-blue-200">
 									<p className="text-sm text-gray-600">
@@ -199,11 +214,7 @@ export default function HomePage() {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{featureCards.map((feature, idx) => (
-							<a
-								key={idx}
-								href={feature.href}
-								className="group"
-							>
+							<a key={idx} href={feature.href} className="group">
 								<Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
 									<CardContent className="pt-6">
 										<div
@@ -235,7 +246,8 @@ export default function HomePage() {
 							<div>
 								<h3 className="text-xl font-bold">Explore More Features</h3>
 								<p className="text-blue-100 mt-1">
-									Access Expenses, Payroll, and Configuration modules from the sidebar
+									Access Expenses, Payroll, and Configuration modules from the
+									sidebar
 								</p>
 							</div>
 							<ArrowRight className="w-6 h-6 flex-shrink-0" />

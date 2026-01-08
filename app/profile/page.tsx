@@ -5,7 +5,16 @@ import { MainLayout } from "@/components/layout/MainLayout"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
-import { Mail, Phone, MapPin, Briefcase, Calendar, Award, FileText, Settings } from "lucide-react"
+import {
+	Mail,
+	Phone,
+	MapPin,
+	Briefcase,
+	Calendar,
+	Award,
+	FileText,
+	Settings,
+} from "lucide-react"
 
 export default function ProfilePage() {
 	const [isEditing, setIsEditing] = useState(false)
@@ -22,7 +31,9 @@ export default function ProfilePage() {
 		bio: "Passionate about building great products and leading teams.",
 	})
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value,
@@ -42,9 +53,7 @@ export default function ProfilePage() {
 							<h1 className="text-4xl font-bold">
 								{formData.firstName} {formData.lastName}
 							</h1>
-							<p className="text-blue-100 text-lg mt-2">
-								{formData.jobTitle}
-							</p>
+							<p className="text-blue-100 text-lg mt-2">{formData.jobTitle}</p>
 							<p className="text-blue-200 text-sm">
 								{formData.department} Department
 							</p>
@@ -227,9 +236,7 @@ export default function ProfilePage() {
 											/>
 										) : (
 											<p className="text-gray-900 font-medium">
-												{new Date(
-													formData.joinDate
-												).toLocaleDateString()}
+												{new Date(formData.joinDate).toLocaleDateString()}
 											</p>
 										)}
 									</div>
@@ -283,9 +290,7 @@ export default function ProfilePage() {
 							<CardContent className="space-y-4">
 								<div className="pb-4 border-b border-gray-200">
 									<p className="text-sm text-gray-600">Years with Company</p>
-									<p className="text-2xl font-bold text-blue-600 mt-1">
-										2.0
-									</p>
+									<p className="text-2xl font-bold text-blue-600 mt-1">2.0</p>
 								</div>
 								<div className="pb-4 border-b border-gray-200">
 									<p className="text-sm text-gray-600">Performance Rating</p>
@@ -294,9 +299,7 @@ export default function ProfilePage() {
 									</p>
 								</div>
 								<div>
-									<p className="text-sm text-gray-600">
-										Profile Completion
-									</p>
+									<p className="text-sm text-gray-600">Profile Completion</p>
 									<div className="mt-2 w-full bg-gray-200 rounded-full h-2">
 										<div
 											className="bg-green-500 h-2 rounded-full"
@@ -361,15 +364,11 @@ export default function ProfilePage() {
 										defaultChecked
 										className="w-4 h-4 rounded"
 									/>
-									<span className="text-sm text-gray-700">
-										In-App Alerts
-									</span>
+									<span className="text-sm text-gray-700">In-App Alerts</span>
 								</label>
 								<label className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
 									<input type="checkbox" className="w-4 h-4 rounded" />
-									<span className="text-sm text-gray-700">
-										Weekly Reports
-									</span>
+									<span className="text-sm text-gray-700">Weekly Reports</span>
 								</label>
 							</CardContent>
 						</Card>

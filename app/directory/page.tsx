@@ -133,7 +133,8 @@ export default function DirectoryPage() {
 											</p>
 											<div className="mt-3 pt-3 border-t border-gray-200">
 												<p className="text-xs text-gray-600">
-													Reports to: <span className="font-medium">{emp.reportingTo}</span>
+													Reports to:{" "}
+													<span className="font-medium">{emp.reportingTo}</span>
 												</p>
 											</div>
 										</div>

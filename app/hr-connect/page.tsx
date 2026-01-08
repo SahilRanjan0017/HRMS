@@ -116,9 +116,7 @@ export default function HRConnectPage() {
 				{/* Header */}
 				<div className="flex items-center justify-between">
 					<div>
-						<h1 className="text-3xl font-bold text-gray-900">
-							HR Connect
-						</h1>
+						<h1 className="text-3xl font-bold text-gray-900">HR Connect</h1>
 						<p className="text-gray-600 mt-2">
 							Company-wide communication and announcements
 						</p>
@@ -180,8 +178,8 @@ export default function HRConnectPage() {
 										message.type === "announcement"
 											? "bg-blue-50 border-blue-200"
 											: message.type === "notification"
-												? "bg-green-50 border-green-200"
-												: "bg-gray-50 border-gray-200"
+											? "bg-green-50 border-green-200"
+											: "bg-gray-50 border-gray-200"
 									}`}
 								>
 									<div className="flex items-start justify-between">
@@ -219,10 +217,7 @@ export default function HRConnectPage() {
 										}
 									}}
 								/>
-								<Button
-									onClick={() => setNewMessage("")}
-									className="px-4"
-								>
+								<Button onClick={() => setNewMessage("")} className="px-4">
 									<Send className="w-4 h-4" />
 								</Button>
 							</div>

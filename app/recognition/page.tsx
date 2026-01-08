@@ -170,9 +170,7 @@ export default function RecognitionPage() {
 												{recognition.reason}
 											</p>
 											<div className="flex justify-between text-xs text-gray-500 mt-3">
-												<span>
-													Given by: {recognition.givenBy}
-												</span>
+												<span>Given by: {recognition.givenBy}</span>
 												<span>
 													{new Date(recognition.date).toLocaleDateString()}
 												</span>
@@ -198,9 +196,7 @@ export default function RecognitionPage() {
 									className="p-4 border border-gray-200 rounded-lg text-center hover:shadow-md transition-shadow"
 								>
 									<div className="text-4xl mb-2">{badge.icon}</div>
-									<h3 className="font-semibold text-gray-900">
-										{badge.name}
-									</h3>
+									<h3 className="font-semibold text-gray-900">{badge.name}</h3>
 									<p className="text-sm text-gray-600 mt-2">
 										{badge.description}
 									</p>

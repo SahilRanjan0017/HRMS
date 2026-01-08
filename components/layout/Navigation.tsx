@@ -1,40 +1,60 @@
-'use client'
+"use client"
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import React, { useState } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { Menu, X } from "lucide-react"
 
 const primaryNavItems = [
-	{ label: 'Home', href: '/home', icon: '🏠' },
-	{ label: 'Directory', href: '/directory', icon: '👥' },
-	{ label: 'Attendance', href: '/attendance', icon: '📋' },
-	{ label: 'Leave', href: '/leave', icon: '📅' },
-	{ label: 'Payroll', href: '/salary', icon: '💵' },
-	{ label: 'Profile', href: '/profile', icon: '👤' },
+	{ label: "Home", href: "/home", icon: "🏠" },
+	{ label: "Directory", href: "/directory", icon: "👥" },
+	{ label: "Attendance", href: "/attendance", icon: "📋" },
+	{ label: "Leave", href: "/leave", icon: "📅" },
+	{ label: "Payroll", href: "/salary", icon: "💵" },
+	{ label: "Profile", href: "/profile", icon: "👤" },
 ]
 
 const allNavItems = [
-	{ label: 'Home', href: '/home', icon: '🏠', category: 'Core' },
-	{ label: 'Directory', href: '/directory', icon: '👥', category: 'Employees' },
-	{ label: 'Attendance', href: '/attendance', icon: '📋', category: 'Time & Attendance' },
-	{ label: 'Leave', href: '/leave', icon: '📅', category: 'Time & Attendance' },
-	{ label: 'Payroll', href: '/salary', icon: '💵', category: 'Payroll' },
-	{ label: 'Expenses', href: '/expenses', icon: '🧾', category: 'Payroll' },
-	{ label: 'Recruitment', href: '/recruitment', icon: '💼', category: 'Talent' },
-	{ label: 'Onboarding', href: '/onboarding', icon: '🚀', category: 'Talent' },
-	{ label: 'Performance', href: '/performance', icon: '⭐', category: 'Development' },
-	{ label: 'Learning', href: '/learning', icon: '📚', category: 'Development' },
-	{ label: 'My Goals', href: '/my-goals', icon: '🎯', category: 'Development' },
-	{ label: 'Recognition', href: '/recognition', icon: '🏆', category: 'Engagement' },
-	{ label: 'Benefits', href: '/benefits', icon: '❤️', category: 'Engagement' },
-	{ label: 'Travel', href: '/travel', icon: '✈️', category: 'Engagement' },
-	{ label: 'Analytics', href: '/analytics', icon: '📊', category: 'Admin' },
-	{ label: 'Compliance', href: '/compliance', icon: '📋', category: 'Admin' },
-	{ label: 'Roles', href: '/roles', icon: '🔐', category: 'Admin' },
-	{ label: 'HR Connect', href: '/hr-connect', icon: '💬', category: 'Admin' },
-	{ label: 'Config', href: '/configuration', icon: '⚙️', category: 'Admin' },
-	{ label: 'Profile', href: '/profile', icon: '👤', category: 'Core' },
+	{ label: "Home", href: "/home", icon: "🏠", category: "Core" },
+	{ label: "Directory", href: "/directory", icon: "👥", category: "Employees" },
+	{
+		label: "Attendance",
+		href: "/attendance",
+		icon: "📋",
+		category: "Time & Attendance",
+	},
+	{ label: "Leave", href: "/leave", icon: "📅", category: "Time & Attendance" },
+	{ label: "Payroll", href: "/salary", icon: "💵", category: "Payroll" },
+	{ label: "Expenses", href: "/expenses", icon: "🧾", category: "Payroll" },
+	{
+		label: "Recruitment",
+		href: "/recruitment",
+		icon: "💼",
+		category: "Talent",
+	},
+	{ label: "Onboarding", href: "/onboarding", icon: "🚀", category: "Talent" },
+	{
+		label: "Performance",
+		href: "/performance",
+		icon: "⭐",
+		category: "Development",
+	},
+	{ label: "Learning", href: "/learning", icon: "📚", category: "Development" },
+	{ label: "My Goals", href: "/my-goals", icon: "🎯", category: "Development" },
+	{
+		label: "Recognition",
+		href: "/recognition",
+		icon: "🏆",
+		category: "Engagement",
+	},
+	{ label: "Benefits", href: "/benefits", icon: "❤️", category: "Engagement" },
+	{ label: "Travel", href: "/travel", icon: "✈️", category: "Engagement" },
+	{ label: "Analytics", href: "/analytics", icon: "📊", category: "Admin" },
+	{ label: "Compliance", href: "/compliance", icon: "📋", category: "Admin" },
+	{ label: "Roles", href: "/roles", icon: "🔐", category: "Admin" },
+	{ label: "HR Connect", href: "/hr-connect", icon: "💬", category: "Admin" },
+	{ label: "Config", href: "/configuration", icon: "⚙️", category: "Admin" },
+	{ label: "Profile", href: "/profile", icon: "👤", category: "Core" },
 ]
 
 export const Navigation: React.FC = () => {
@@ -45,7 +65,10 @@ export const Navigation: React.FC = () => {
 		<nav className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
 			<div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-16">
-					<Link href="/home" className="text-2xl font-bold text-blue-600 flex-shrink-0">
+					<Link
+						href="/home"
+						className="text-2xl font-bold text-blue-600 flex-shrink-0"
+					>
 						HRMS
 					</Link>
 
@@ -57,8 +80,8 @@ export const Navigation: React.FC = () => {
 								href={item.href}
 								className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors whitespace-nowrap ${
 									pathname === item.href
-										? 'bg-blue-100 text-blue-700 font-semibold'
-										: 'text-gray-700 hover:bg-gray-100'
+										? "bg-blue-100 text-blue-700 font-semibold"
+										: "text-gray-700 hover:bg-gray-100"
 								}`}
 							>
 								<span>{item.icon}</span>
@@ -99,8 +122,8 @@ export const Navigation: React.FC = () => {
 									onClick={() => setIsOpen(false)}
 									className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors block w-full text-left ${
 										pathname === item.href
-											? 'bg-blue-100 text-blue-700 font-semibold'
-											: 'text-gray-700 hover:bg-gray-100'
+											? "bg-blue-100 text-blue-700 font-semibold"
+											: "text-gray-700 hover:bg-gray-100"
 									}`}
 								>
 									<span className="text-lg">{item.icon}</span>

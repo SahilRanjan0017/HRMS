@@ -75,7 +75,10 @@ const mockBenefits: Benefit[] = [
 
 export default function BenefitsPage() {
 	const activeBenefits = mockBenefits.filter((b) => b.status === "active")
-	const totalEnrolled = mockBenefits.reduce((sum, b) => sum + b.employeeCount, 0)
+	const totalEnrolled = mockBenefits.reduce(
+		(sum, b) => sum + b.employeeCount,
+		0
+	)
 
 	return (
 		<MainLayout>
@@ -158,11 +161,14 @@ export default function BenefitsPage() {
 											</p>
 											<div className="flex gap-4 mt-3 text-sm">
 												<span className="text-gray-600">
-													Type: <span className="font-medium">{benefit.type}</span>
+													Type:{" "}
+													<span className="font-medium">{benefit.type}</span>
 												</span>
 												<span className="text-gray-600">
 													Coverage:{" "}
-													<span className="font-medium">{benefit.coverage}</span>
+													<span className="font-medium">
+														{benefit.coverage}
+													</span>
 												</span>
 												<span className="text-gray-600">
 													Enrolled:{" "}
@@ -179,9 +185,7 @@ export default function BenefitsPage() {
 													: "bg-gray-100 text-gray-800"
 											}`}
 										>
-											{benefit.status === "active"
-												? "Active"
-												: "Inactive"}
+											{benefit.status === "active" ? "Active" : "Inactive"}
 										</span>
 									</div>
 								</div>
@@ -213,9 +217,7 @@ export default function BenefitsPage() {
 												<div
 													className="bg-blue-500 h-2 rounded-full"
 													style={{
-														width: `${
-															(benefit.employeeCount / 45) * 100
-														}%`,
+														width: `${(benefit.employeeCount / 45) * 100}%`,
 													}}
 												></div>
 											</div>

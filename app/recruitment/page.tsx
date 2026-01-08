@@ -53,7 +53,10 @@ const mockJobOpenings: JobOpening[] = [
 export default function RecruitmentPage() {
 	const openJobs = mockJobOpenings.filter((j) => j.status === "open")
 	const filledJobs = mockJobOpenings.filter((j) => j.status === "filled")
-	const totalApplicants = mockJobOpenings.reduce((sum, j) => sum + j.applicants, 0)
+	const totalApplicants = mockJobOpenings.reduce(
+		(sum, j) => sum + j.applicants,
+		0
+	)
 
 	return (
 		<MainLayout>

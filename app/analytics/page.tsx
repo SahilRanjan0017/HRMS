@@ -26,12 +26,8 @@ export default function AnalyticsPage() {
 							<div className="flex items-center justify-between">
 								<div>
 									<p className="text-gray-600 text-sm">Total Employees</p>
-									<p className="text-3xl font-bold text-gray-900 mt-2">
-										45
-									</p>
-									<p className="text-xs text-green-600 mt-2">
-										↑ 2 this month
-									</p>
+									<p className="text-3xl font-bold text-gray-900 mt-2">45</p>
+									<p className="text-xs text-green-600 mt-2">↑ 2 this month</p>
 								</div>
 								<Users className="w-10 h-10 text-blue-500 opacity-20" />
 							</div>
@@ -43,9 +39,7 @@ export default function AnalyticsPage() {
 							<div className="flex items-center justify-between">
 								<div>
 									<p className="text-gray-600 text-sm">Avg. Tenure</p>
-									<p className="text-3xl font-bold text-gray-900 mt-2">
-										3.2
-									</p>
+									<p className="text-3xl font-bold text-gray-900 mt-2">3.2</p>
 									<p className="text-xs text-gray-600 mt-2">years</p>
 								</div>
 								<TrendingUp className="w-10 h-10 text-green-500 opacity-20" />
@@ -58,12 +52,8 @@ export default function AnalyticsPage() {
 							<div className="flex items-center justify-between">
 								<div>
 									<p className="text-gray-600 text-sm">Attrition Rate</p>
-									<p className="text-3xl font-bold text-gray-900 mt-2">
-										8.5%
-									</p>
-									<p className="text-xs text-red-600 mt-2">
-										↑ from 7.2%
-									</p>
+									<p className="text-3xl font-bold text-gray-900 mt-2">8.5%</p>
+									<p className="text-xs text-red-600 mt-2">↑ from 7.2%</p>
 								</div>
 								<BarChart3 className="w-10 h-10 text-red-500 opacity-20" />
 							</div>
@@ -75,9 +65,7 @@ export default function AnalyticsPage() {
 							<div className="flex items-center justify-between">
 								<div>
 									<p className="text-gray-600 text-sm">Avg. Performance</p>
-									<p className="text-3xl font-bold text-gray-900 mt-2">
-										4.1
-									</p>
+									<p className="text-3xl font-bold text-gray-900 mt-2">4.1</p>
 									<p className="text-xs text-gray-600 mt-2">out of 5</p>
 								</div>
 								<PieChart className="w-10 h-10 text-yellow-500 opacity-20" />
@@ -139,9 +127,7 @@ export default function AnalyticsPage() {
 									className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
 								>
 									<span className="text-gray-700">{item.metric}</span>
-									<span className="font-bold text-gray-900">
-										{item.value}
-									</span>
+									<span className="font-bold text-gray-900">{item.value}</span>
 								</div>
 							))}
 						</div>

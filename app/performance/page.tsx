@@ -165,15 +165,15 @@ export default function PerformancePage() {
 												goal.status === "active"
 													? "bg-blue-100 text-blue-800"
 													: goal.status === "completed"
-														? "bg-green-100 text-green-800"
-														: "bg-gray-100 text-gray-800"
+													? "bg-green-100 text-green-800"
+													: "bg-gray-100 text-gray-800"
 											}`}
 										>
 											{goal.status === "on-hold"
 												? "On Hold"
 												: goal.status === "completed"
-													? "Completed"
-													: "Active"}
+												? "Completed"
+												: "Active"}
 										</span>
 									</div>
 									<div className="space-y-2">
@@ -190,8 +190,7 @@ export default function PerformancePage() {
 										<div className="flex justify-between text-xs text-gray-500 mt-2">
 											<span>Owner: {goal.owner}</span>
 											<span>
-												Due:{" "}
-												{new Date(goal.dueDate).toLocaleDateString()}
+												Due: {new Date(goal.dueDate).toLocaleDateString()}
 											</span>
 										</div>
 									</div>
@@ -221,8 +220,7 @@ export default function PerformancePage() {
 											Reviewer: {review.reviewer}
 										</p>
 										<p className="text-xs text-gray-500 mt-1">
-											Due:{" "}
-											{new Date(review.dueDate).toLocaleDateString()}
+											Due: {new Date(review.dueDate).toLocaleDateString()}
 										</p>
 									</div>
 									<div className="flex items-center gap-4">
@@ -239,15 +237,15 @@ export default function PerformancePage() {
 												review.status === "completed"
 													? "bg-green-100 text-green-800"
 													: review.status === "in-progress"
-														? "bg-blue-100 text-blue-800"
-														: "bg-gray-100 text-gray-800"
+													? "bg-blue-100 text-blue-800"
+													: "bg-gray-100 text-gray-800"
 											}`}
 										>
 											{review.status === "in-progress"
 												? "In Progress"
 												: review.status === "completed"
-													? "Completed"
-													: "Pending"}
+												? "Completed"
+												: "Pending"}
 										</span>
 									</div>
 								</div>

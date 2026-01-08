@@ -5,12 +5,32 @@ import { useAuth } from "@/lib/hooks"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
-import { Mail, Lock, ArrowRight, Briefcase, Users, TrendingUp, Award } from "lucide-react"
+import {
+	Mail,
+	Lock,
+	ArrowRight,
+	Briefcase,
+	Users,
+	TrendingUp,
+	Award,
+} from "lucide-react"
 
 const features = [
-	{ icon: Users, title: "Employee Management", description: "Complete employee directory" },
-	{ icon: Briefcase, title: "Recruitment", description: "Hire the best talent" },
-	{ icon: TrendingUp, title: "Performance", description: "Track & develop employees" },
+	{
+		icon: Users,
+		title: "Employee Management",
+		description: "Complete employee directory",
+	},
+	{
+		icon: Briefcase,
+		title: "Recruitment",
+		description: "Hire the best talent",
+	},
+	{
+		icon: TrendingUp,
+		title: "Performance",
+		description: "Track & develop employees",
+	},
 	{ icon: Award, title: "Recognition", description: "Reward achievements" },
 ]
 
@@ -53,14 +73,18 @@ export default function LoginPage() {
 						Modern HR Management System
 					</h1>
 					<p className="text-blue-100 text-lg mb-12">
-						Streamline your human resources operations with our comprehensive HRMS platform
+						Streamline your human resources operations with our comprehensive
+						HRMS platform
 					</p>
 
 					<div className="grid grid-cols-2 gap-6">
 						{features.map((feature, idx) => {
 							const Icon = feature.icon
 							return (
-								<div key={idx} className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
+								<div
+									key={idx}
+									className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm"
+								>
 									<Icon className="w-8 h-8 mb-3 text-blue-200" />
 									<h3 className="font-semibold mb-1">{feature.title}</h3>
 									<p className="text-sm text-blue-100">{feature.description}</p>
@@ -135,10 +159,16 @@ export default function LoginPage() {
 
 							<div className="flex items-center justify-between text-sm">
 								<label className="flex items-center gap-2 text-gray-700 font-medium">
-									<input type="checkbox" className="w-4 h-4 rounded border-gray-300" />
+									<input
+										type="checkbox"
+										className="w-4 h-4 rounded border-gray-300"
+									/>
 									Remember me
 								</label>
-								<a href="#" className="text-blue-600 hover:text-blue-700 font-semibold">
+								<a
+									href="#"
+									className="text-blue-600 hover:text-blue-700 font-semibold"
+								>
 									Forgot password?
 								</a>
 							</div>
@@ -165,7 +195,8 @@ export default function LoginPage() {
 						<div className="mt-6 text-center text-sm text-gray-600">
 							<p>Demo credentials:</p>
 							<p className="font-mono text-xs mt-2 bg-gray-50 p-3 rounded text-gray-700">
-								Email: sahil@company.com<br />
+								Email: sahil@company.com
+								<br />
 								Password: password
 							</p>
 						</div>

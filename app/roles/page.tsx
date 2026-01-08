@@ -182,9 +182,7 @@ export default function RolesPage() {
 									className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50"
 								>
 									<div className="flex items-center justify-between mb-2">
-										<h3 className="font-semibold text-gray-900">
-											{role.name}
-										</h3>
+										<h3 className="font-semibold text-gray-900">{role.name}</h3>
 										<span className="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
 											Active
 										</span>
@@ -195,15 +193,11 @@ export default function RolesPage() {
 									<div className="flex gap-4 text-sm">
 										<span className="text-gray-600">
 											Users:{" "}
-											<span className="font-semibold">
-												{role.userCount}
-											</span>
+											<span className="font-semibold">{role.userCount}</span>
 										</span>
 										<span className="text-gray-600">
 											Permissions:{" "}
-											<span className="font-semibold">
-												{role.permissions}
-											</span>
+											<span className="font-semibold">{role.permissions}</span>
 										</span>
 									</div>
 									<Button variant="outline" size="sm" className="mt-3">

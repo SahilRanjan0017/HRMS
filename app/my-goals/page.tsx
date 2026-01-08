@@ -25,7 +25,8 @@ const mockPersonalGoals: PersonalGoal[] = [
 		status: "in-progress",
 		progress: 65,
 		dueDate: "2024-03-31",
-		description: "Streamline the product launch workflow to reduce time-to-market",
+		description:
+			"Streamline the product launch workflow to reduce time-to-market",
 		priority: "high",
 	},
 	{
@@ -97,9 +98,15 @@ const getStatusColor = (status: string) => {
 }
 
 export default function MyGoalsPage() {
-	const completedGoals = mockPersonalGoals.filter((g) => g.status === "completed")
-	const inProgressGoals = mockPersonalGoals.filter((g) => g.status === "in-progress")
-	const notStartedGoals = mockPersonalGoals.filter((g) => g.status === "not-started")
+	const completedGoals = mockPersonalGoals.filter(
+		(g) => g.status === "completed"
+	)
+	const inProgressGoals = mockPersonalGoals.filter(
+		(g) => g.status === "in-progress"
+	)
+	const notStartedGoals = mockPersonalGoals.filter(
+		(g) => g.status === "not-started"
+	)
 
 	const averageProgress = Math.round(
 		mockPersonalGoals.reduce((sum, g) => sum + g.progress, 0) /
@@ -170,9 +177,7 @@ export default function MyGoalsPage() {
 						<CardContent className="pt-6">
 							<div className="flex items-center justify-between">
 								<div>
-									<p className="text-gray-600 text-sm">
-										Avg. Progress
-									</p>
+									<p className="text-gray-600 text-sm">Avg. Progress</p>
 									<p className="text-3xl font-bold text-gray-900 mt-2">
 										{averageProgress}%
 									</p>
@@ -219,19 +224,19 @@ export default function MyGoalsPage() {
 													goal.status === "completed"
 														? "bg-green-200 text-green-800"
 														: goal.status === "in-progress"
-															? "bg-blue-200 text-blue-800"
-															: goal.status === "on-hold"
-																? "bg-yellow-200 text-yellow-800"
-																: "bg-gray-200 text-gray-800"
+														? "bg-blue-200 text-blue-800"
+														: goal.status === "on-hold"
+														? "bg-yellow-200 text-yellow-800"
+														: "bg-gray-200 text-gray-800"
 												}`}
 											>
 												{goal.status === "in-progress"
 													? "In Progress"
 													: goal.status === "not-started"
-														? "Not Started"
-														: goal.status === "on-hold"
-															? "On Hold"
-															: "Completed"}
+													? "Not Started"
+													: goal.status === "on-hold"
+													? "On Hold"
+													: "Completed"}
 											</span>
 										</div>
 									</div>
@@ -243,9 +248,7 @@ export default function MyGoalsPage() {
 									<div className="space-y-2">
 										<div className="flex items-center justify-between text-sm">
 											<span className="text-gray-600">Progress</span>
-											<span className="font-medium">
-												{goal.progress}%
-											</span>
+											<span className="font-medium">{goal.progress}%</span>
 										</div>
 										<div className="w-full bg-gray-300 rounded-full h-2">
 											<div
@@ -259,18 +262,10 @@ export default function MyGoalsPage() {
 									</div>
 
 									<div className="flex gap-2 mt-4">
-										<Button
-											variant="outline"
-											size="sm"
-											className="flex-1"
-										>
+										<Button variant="outline" size="sm" className="flex-1">
 											Update Progress
 										</Button>
-										<Button
-											variant="outline"
-											size="sm"
-											className="flex-1"
-										>
+										<Button variant="outline" size="sm" className="flex-1">
 											Edit
 										</Button>
 									</div>

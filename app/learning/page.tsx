@@ -57,9 +57,14 @@ const mockCourses: Course[] = [
 
 export default function LearningPage() {
 	const availableCourses = mockCourses.filter((c) => c.status === "available")
-	const inProgressCourses = mockCourses.filter((c) => c.status === "in-progress")
+	const inProgressCourses = mockCourses.filter(
+		(c) => c.status === "in-progress"
+	)
 	const completedCourses = mockCourses.filter((c) => c.status === "completed")
-	const totalParticipants = mockCourses.reduce((sum, c) => sum + c.participants, 0)
+	const totalParticipants = mockCourses.reduce(
+		(sum, c) => sum + c.participants,
+		0
+	)
 
 	return (
 		<MainLayout>
@@ -158,8 +163,7 @@ export default function LearningPage() {
 										Duration: {course.duration}
 									</p>
 									<p className="text-xs text-gray-500 mt-2">
-										Starts:{" "}
-										{new Date(course.startDate).toLocaleDateString()}
+										Starts: {new Date(course.startDate).toLocaleDateString()}
 									</p>
 									<p className="text-xs text-gray-500 mt-1">
 										{course.participants} participants
@@ -198,15 +202,15 @@ export default function LearningPage() {
 											course.status === "available"
 												? "bg-blue-100 text-blue-800"
 												: course.status === "in-progress"
-													? "bg-orange-100 text-orange-800"
-													: "bg-green-100 text-green-800"
+												? "bg-orange-100 text-orange-800"
+												: "bg-green-100 text-green-800"
 										}`}
 									>
 										{course.status === "in-progress"
 											? "In Progress"
 											: course.status === "completed"
-												? "Completed"
-												: "Available"}
+											? "Completed"
+											: "Available"}
 									</span>
 								</div>
 							))}

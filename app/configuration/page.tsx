@@ -17,9 +17,17 @@ export default function ConfigurationPage() {
 	const [activeTab, setActiveTab] = useState<string>("company")
 
 	const tabs: ConfigTab[] = [
-		{ id: "company", name: "Company Settings", icon: <Building2 className="w-4 h-4" /> },
+		{
+			id: "company",
+			name: "Company Settings",
+			icon: <Building2 className="w-4 h-4" />,
+		},
 		{ id: "hr", name: "HR Settings", icon: <Settings className="w-4 h-4" /> },
-		{ id: "email", name: "Email Configuration", icon: <Mail className="w-4 h-4" /> },
+		{
+			id: "email",
+			name: "Email Configuration",
+			icon: <Mail className="w-4 h-4" />,
+		},
 		{ id: "security", name: "Security", icon: <Shield className="w-4 h-4" /> },
 	]
 
@@ -214,14 +222,8 @@ export default function ConfigurationPage() {
 							</div>
 							<div>
 								<label className="flex items-center gap-2">
-									<input
-										type="checkbox"
-										defaultChecked
-										className="rounded"
-									/>
-									<span className="text-sm text-gray-700">
-										Use TLS/SSL
-									</span>
+									<input type="checkbox" defaultChecked className="rounded" />
+									<span className="text-sm text-gray-700">Use TLS/SSL</span>
 								</label>
 							</div>
 							<Button>Test Email Configuration</Button>
@@ -246,11 +248,7 @@ export default function ConfigurationPage() {
 								</div>
 								<div>
 									<label className="flex items-center gap-2">
-										<input
-											type="checkbox"
-											defaultChecked
-											className="rounded"
-										/>
+										<input type="checkbox" defaultChecked className="rounded" />
 										<span className="text-sm text-gray-700">
 											Require uppercase letters
 										</span>
@@ -258,11 +256,7 @@ export default function ConfigurationPage() {
 								</div>
 								<div>
 									<label className="flex items-center gap-2">
-										<input
-											type="checkbox"
-											defaultChecked
-											className="rounded"
-										/>
+										<input type="checkbox" defaultChecked className="rounded" />
 										<span className="text-sm text-gray-700">
 											Require special characters
 										</span>
@@ -285,11 +279,7 @@ export default function ConfigurationPage() {
 							<CardContent className="space-y-4">
 								<div>
 									<label className="flex items-center gap-2">
-										<input
-											type="checkbox"
-											defaultChecked
-											className="rounded"
-										/>
+										<input type="checkbox" defaultChecked className="rounded" />
 										<span className="text-sm text-gray-700">
 											Enable 2FA for all users
 										</span>
@@ -297,10 +287,7 @@ export default function ConfigurationPage() {
 								</div>
 								<div>
 									<label className="flex items-center gap-2">
-										<input
-											type="checkbox"
-											className="rounded"
-										/>
+										<input type="checkbox" className="rounded" />
 										<span className="text-sm text-gray-700">
 											Require 2FA for admins only
 										</span>

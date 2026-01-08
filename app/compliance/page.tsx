@@ -96,7 +96,9 @@ const getStatusIcon = (status: string) => {
 }
 
 export default function CompliancePage() {
-	const compliantItems = mockComplianceItems.filter((c) => c.status === "compliant")
+	const compliantItems = mockComplianceItems.filter(
+		(c) => c.status === "compliant"
+	)
 	const pendingItems = mockComplianceItems.filter((c) => c.status === "pending")
 
 	return (
@@ -137,8 +139,7 @@ export default function CompliancePage() {
 								<div>
 									<p className="text-gray-600 text-sm">Compliance Status</p>
 									<p className="text-3xl font-bold text-green-600 mt-2">
-										{compliantItems.length}/
-										{mockComplianceItems.length}
+										{compliantItems.length}/{mockComplianceItems.length}
 									</p>
 								</div>
 								<Shield className="w-10 h-10 text-green-500 opacity-20" />
@@ -153,8 +154,10 @@ export default function CompliancePage() {
 									<p className="text-gray-600 text-sm">Avg. Acknowledgment</p>
 									<p className="text-3xl font-bold text-gray-900 mt-2">
 										{Math.round(
-											mockPolicies.reduce((sum, p) => sum + p.acknowledgmentRate, 0) /
-												mockPolicies.length
+											mockPolicies.reduce(
+												(sum, p) => sum + p.acknowledgmentRate,
+												0
+											) / mockPolicies.length
 										)}
 										%
 									</p>
@@ -184,9 +187,7 @@ export default function CompliancePage() {
 											</h3>
 											<p className="text-sm text-gray-600 mt-1">
 												{policy.category} • Last updated:{" "}
-												{new Date(
-													policy.lastUpdated
-												).toLocaleDateString()}
+												{new Date(policy.lastUpdated).toLocaleDateString()}
 											</p>
 											<div className="mt-3">
 												<div className="flex items-center justify-between mb-2">
@@ -246,15 +247,15 @@ export default function CompliancePage() {
 											item.status === "compliant"
 												? "bg-green-100 text-green-800"
 												: item.status === "non-compliant"
-													? "bg-red-100 text-red-800"
-													: "bg-yellow-100 text-yellow-800"
+												? "bg-red-100 text-red-800"
+												: "bg-yellow-100 text-yellow-800"
 										}`}
 									>
 										{item.status === "non-compliant"
 											? "Non-Compliant"
 											: item.status === "compliant"
-												? "Compliant"
-												: "Pending"}
+											? "Compliant"
+											: "Pending"}
 									</span>
 								</div>
 							))}

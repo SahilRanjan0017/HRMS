@@ -61,10 +61,19 @@ const mockTravelRequests: TravelRequest[] = [
 ]
 
 export default function TravelPage() {
-	const pendingRequests = mockTravelRequests.filter((r) => r.status === "pending")
-	const approvedRequests = mockTravelRequests.filter((r) => r.status === "approved")
-	const completedRequests = mockTravelRequests.filter((r) => r.status === "completed")
-	const totalBudget = mockTravelRequests.reduce((sum, r) => sum + r.estimatedCost, 0)
+	const pendingRequests = mockTravelRequests.filter(
+		(r) => r.status === "pending"
+	)
+	const approvedRequests = mockTravelRequests.filter(
+		(r) => r.status === "approved"
+	)
+	const completedRequests = mockTravelRequests.filter(
+		(r) => r.status === "completed"
+	)
+	const totalBudget = mockTravelRequests.reduce(
+		(sum, r) => sum + r.estimatedCost,
+		0
+	)
 
 	return (
 		<MainLayout>
@@ -167,16 +176,16 @@ export default function TravelPage() {
 												request.status === "approved"
 													? "bg-green-100 text-green-800"
 													: request.status === "pending"
-														? "bg-yellow-100 text-yellow-800"
-														: request.status === "completed"
-															? "bg-blue-100 text-blue-800"
-															: "bg-red-100 text-red-800"
+													? "bg-yellow-100 text-yellow-800"
+													: request.status === "completed"
+													? "bg-blue-100 text-blue-800"
+													: "bg-red-100 text-red-800"
 											}`}
 										>
 											{request.status === "in-progress"
 												? "In Progress"
 												: request.status.charAt(0).toUpperCase() +
-													request.status.slice(1)}
+												  request.status.slice(1)}
 										</span>
 									</div>
 
@@ -237,27 +246,22 @@ export default function TravelPage() {
 								},
 								{
 									title: "Budget Limits",
-									description:
-										"Domestic: $3000, International: $8000",
+									description: "Domestic: $3000, International: $8000",
 								},
 								{
 									title: "Approval Required",
-									description:
-										"All travel requests require manager approval",
+									description: "All travel requests require manager approval",
 								},
 								{
 									title: "Expense Reports",
-									description:
-										"Submit expense reports within 5 days of return",
+									description: "Submit expense reports within 5 days of return",
 								},
 							].map((item, idx) => (
 								<div
 									key={idx}
 									className="p-3 bg-gray-50 rounded-lg border border-gray-200"
 								>
-									<h4 className="font-semibold text-gray-900">
-										{item.title}
-									</h4>
+									<h4 className="font-semibold text-gray-900">{item.title}</h4>
 									<p className="text-sm text-gray-600 mt-1">
 										{item.description}
 									</p>

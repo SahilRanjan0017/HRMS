@@ -3,7 +3,16 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, Home, Users, Calendar, DollarSign, BarChart3, Settings } from "lucide-react"
+import {
+	Menu,
+	X,
+	Home,
+	Users,
+	Calendar,
+	DollarSign,
+	BarChart3,
+	Settings,
+} from "lucide-react"
 
 interface SidebarLayoutProps {
 	children: React.ReactNode
@@ -109,16 +118,11 @@ export const SidebarLayout: React.FC<SidebarLayoutProps> = ({ children }) => {
 							</button>
 
 							{/* Logo for Mobile */}
-							<Link
-								href="/home"
-								className="lg:hidden flex items-center gap-2"
-							>
+							<Link href="/home" className="lg:hidden flex items-center gap-2">
 								<div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
 									<span className="text-white font-bold text-sm">HR</span>
 								</div>
-								<span className="text-lg font-bold text-blue-600">
-									HRMS
-								</span>
+								<span className="text-lg font-bold text-blue-600">HRMS</span>
 							</Link>
 						</div>
 
