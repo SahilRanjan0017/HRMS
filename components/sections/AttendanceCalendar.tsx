@@ -113,9 +113,9 @@ export const AttendanceCalendar: React.FC<AttendanceCalendarProps> = ({
 			<table className="w-full">
 				<thead>
 					<tr>
-						{["S", "M", "T", "W", "T", "F", "S"].map((day) => (
+						{["S", "M", "T", "W", "T", "F", "S"].map((day, index) => (
 							<th
-								key={day}
+								key={index}
 								className="text-center py-2 text-xs font-semibold text-gray-600 bg-gray-50"
 							>
 								{day}
